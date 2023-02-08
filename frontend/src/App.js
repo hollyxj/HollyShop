@@ -11,7 +11,7 @@ const App = () => {
       <Header/>
       <main className='py-3'>
         <Container>
-          <h1>Welcome to ShopHolly.com!</h1>
+          <h1>Welcome to Holly Shop!</h1>
           <Routes>         
             <Route path='/' element={<HomeScreen />} exact />  
             <Route path='/product/:id' element={<ProductScreen />}/>
