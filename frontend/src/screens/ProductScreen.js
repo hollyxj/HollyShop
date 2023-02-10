@@ -8,9 +8,9 @@ import Loader from '../components/Loader'
 import { listProductDetails } from '../actions/productActions'
 
 
-const ProductScreen = ({ history, match }) => {
+const ProductScreen = () => {
     const { id } = useParams()
-    const [qty, setQty] = useState(0)
+    const [qty, setQty] = useState(1)
 
     const dispatch = useDispatch()
 
@@ -106,7 +106,7 @@ const ProductScreen = ({ history, match }) => {
                                 onClick={addToCartHandler}
                                 className='btn-lg' 
                                 type='button'
-                                diabled={product.countInStock === 0}
+                                disabled={product.countInStock === 0}
                             >
                                 Add to Cart
                             </Button>
