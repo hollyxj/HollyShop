@@ -15,7 +15,7 @@ const ProductScreen = ({ match }) => {
           setProduct(data)
         }
         fetchProduct()
-      }, [])
+      }, [ id ])
 
     return<>
         <Link className='btn btn-secondary my-3' to='/'>Go Back</Link>
