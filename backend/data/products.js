@@ -1,6 +1,5 @@
 const products = [
   {    
-    _id: '1',
     name: 'Squishmallow Cow (7.5 inch, "Connor The Cow")',
     image: '/images/cow.jpg',
     description:
@@ -13,7 +12,6 @@ const products = [
     numReviews: 175,
   },
   {    
-    _id: '2',
     name: 'Multicolor Aesthetic Highlighters, 12 Count',
     image: '/images/highlighters.jpg',
     description:
@@ -26,7 +24,6 @@ const products = [
     numReviews: 490,
   },
   {    
-    _id: '3',
     name: 'iPhone 14 Pro Max, Silver, 256GB',
     image: '/images/iphone.jpg',
     description:
@@ -39,7 +36,6 @@ const products = [
     numReviews: 1200,
   },
   {    
-    _id: '4',
     name: 'Keurig K- Slim Single Serve K-Cup Pod Coffee Maker, White',
     image: '/images/keurig.jpg',
     description:
@@ -52,7 +48,6 @@ const products = [
     numReviews: 49542,
   },
   {    
-    _id: '5',
     name: 'Decorative Throw Pillow Covers Set, 16x16 Inches, Beige ',
     image: '/images/pillows.jpg',
     description:
@@ -65,7 +60,6 @@ const products = [
     numReviews: 2105,
   },
   {    
-    _id: '6',
     name: 'Botanical Framed Pictures Set for Wall Art, 4 Panels, 10x10 Inch ',
     image: '/images/plants.jpg',
     description:
@@ -78,7 +72,6 @@ const products = [
     numReviews: 3356,
   },
   {    
-    _id: '7',
     name: 'Retro Smiley Face Soft Comfy Slippers',
     image: '/images/slippers.jpg',
     description:
