@@ -9,7 +9,7 @@ import Order from './models/orderModel.js'
 import connectDB from './config/db.js'
 
 dotenv.config()
-mongoose.set('strictQuery', true);
+//mongoose.set('strictQuery', true);
 
 connectDB()
 
@@ -46,7 +46,7 @@ const destroyData = async () => {
     console.log('Data Destroyed!'.red.inverse)
     process.exit()
   } catch (error) {
-    console.error(`!!${error}`.red.inverse)
+    console.error(`${error}`.red.inverse)
     process.exit(1)
   }
 }
