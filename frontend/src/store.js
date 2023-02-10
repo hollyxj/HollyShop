@@ -12,9 +12,11 @@ const store = configureStore({
     reducer: {
         productList: productListReducer,
         productDetails: productDetailsReducer,
-        cart: cartReducer
+        cart: cartReducer,
     },
-    preloadedState: {cartItemsFromStorage},
+    preloadedState: {
+        cart: { cartItems: cartItemsFromStorage }
+    },
     middleware: [thunk],
 })
 
