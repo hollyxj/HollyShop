@@ -20,8 +20,7 @@ router.get('/:id', asyncHandler (async (req, res) => {
     
     if(product) {
         res.json(product)
-    }
-    else {
+    } else {
         res.status(404).json({ message: 'Product not found' })
     }
 }))
