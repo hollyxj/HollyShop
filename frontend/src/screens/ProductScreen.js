@@ -33,10 +33,10 @@ const ProductScreen = ({ history, match }) => {
         </Link>
         {loading ? <Loader/> : error ? <Message variant='danger'>{error}</Message> : (
             <Row>
-            <Col md={6}>
+            <Col className='product-page-section' md={6}>
                 <Image src={product.image} alt={product.name} fluid/>
             </Col>
-            <Col md={3}>
+            <Col className='product-page-section' md={3}>
                 <ListGroup variant='flush'>
                     <ListGroup.Item>
                         <h3>{product.name}</h3>
@@ -54,15 +54,15 @@ const ProductScreen = ({ history, match }) => {
                     </ListGroup.Item>
                 </ListGroup>
             </Col>
-            <Col md={3}>
+            <Col className='product-page-section'>
                 <Card>
                     <ListGroup variant='flush'>
                         <ListGroup.Item>
                             <Row>
-                                <Col>
+                                <Col className='product-page-section' >
                                     Price:
                                 </Col>
-                                <Col>
+                                <Col className='product-page-section'>
                                     <strong>${product.price}</strong>
                                 </Col>
                             </Row>
@@ -70,10 +70,10 @@ const ProductScreen = ({ history, match }) => {
 
                         <ListGroup.Item>
                             <Row>
-                                <Col>
+                                <Col className='product-page-section' >
                                     Status:
                                 </Col>
-                                <Col>
+                                <Col className='product-page-section'>
                                     {product.countInStock > 0 ? 'In Stock' : 'Out Of Stock'}
                                 </Col>
                             </Row>
@@ -82,9 +82,10 @@ const ProductScreen = ({ history, match }) => {
                         {product.countInStock > 0 && (
                             <ListGroup.Item>
                                 <Row>
-                                    <Col>Qty</Col>
-                                    <Col>
+                                    <Col className='product-page-section' >Qty</Col>
+                                    <Col className='product-page-section' >
                                         <Form.Control 
+                                            style={{padding: '10px 2px'}}
                                             as='select' 
                                             value={qty} 
                                             onChange={(e) => setQty(e.target.value)}
