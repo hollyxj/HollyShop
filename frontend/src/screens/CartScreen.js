@@ -40,25 +40,33 @@ const CartScreen = ({ match }) => {
     <Row>
       <Col md={8}>
         <h1>Shopping Cart</h1>
-        {cartItems.length === 0 ? (
+        {cartItems.length === 0 ? ( 
+          // Check if there's anything in the cart
           <Message>
+           {/* If cart is empty, show a message with a link to go back to home */}
             Your cart is empty <Link to='/'>Go Back</Link>
           </Message>
         ) : (
           <ListGroup variant='flush'>
             {cartItems.map((item) => (
               <ListGroup.Item key={item.product}>
+                {/* All 'item' fields are assigned in cartActions.js */}
                 <Row>
                   <Col md={2}>
+                    {/* Show the product image */}
                     <Image src={item.image} alt={item.name} fluid rounded />
                   </Col>
                   <Col md={3}>
+                    {/* Name of the product along with a Link to it's product page */}
                     <Link to={`/product/${item.product}`}>{item.name}</Link>
                   </Col>
+                  {/* Show the price of the product */}
                   <Col md={2}>${item.price}</Col>
                   <Col md={2}>
+                    {/* Update quanity when dropdowns change */}
                     <Form.Control
                       as='select'
+                      // Update quantity the drop down value 
                       value={item.qty}
                       onChange={(e) =>
                         dispatch(
@@ -66,6 +74,7 @@ const CartScreen = ({ match }) => {
                         )
                       }
                     >
+                      {/* Show item count in stock */}
                       {[...Array(item.countInStock).keys()].map((x) => (
                         <option key={x + 1} value={x + 1}>
                           {x + 1}
@@ -74,11 +83,13 @@ const CartScreen = ({ match }) => {
                     </Form.Control>
                   </Col>
                   <Col md={2}>
+                    {/* Delete item from the cart */}
                     <Button
                       type='button'
                       variant='light'
                       onClick={() => removeFromCartHandler(item.product)}
                     >
+                      {/* Show trashcan icon to remove an item from the cart */}
                       <i className='fas fa-trash'></i>
                     </Button>
                   </Col>
@@ -89,22 +100,28 @@ const CartScreen = ({ match }) => {
         )}
       </Col>
       <Col md={4}>
-        <Card>
+        <Card> 
+          {/* SubTotal Card */}
           <ListGroup variant='flush'>
             <ListGroup.Item>
+              {/* Show the subtotal */}
               <h2>
+                {/* Add current item to accumulator */}
                 Subtotal ({cartItems.reduce((acc, item) => acc + item.qty, 0)})
                 items
               </h2>
-              $
-              {cartItems
+              {/* Show price */}
+              $ { cartItems
                 .reduce((acc, item) => acc + item.qty * item.price, 0)
-                .toFixed(2)}
+                .toFixed(2)} 
+                {/* Show 2 decimals of price */}
             </ListGroup.Item>
             <ListGroup.Item>
+              {/* Checkout button */}
               <Button
                 type='button'
                 className='btn-block'
+                // Disable if nothing in the cart
                 disabled={cartItems.length === 0}
                 onClick={checkoutHandler}
               >
