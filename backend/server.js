@@ -22,6 +22,8 @@ const PORT = process.env.PORT || 4000
 
 app.use(notFound)
 app.use(errorHandler)
+app.use('/api/products', productRoutes)
+app.use('/cart/api/products', productRoutes)
 
 app.listen(PORT), console.log(`Server running in ${process.env.NODE_ENV} mode on port ${PORT}`.magenta.bold)
 
