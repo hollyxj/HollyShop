@@ -5,10 +5,10 @@ import { Row, Col, Image, ListGroup, Card, Button, Form } from 'react-bootstrap'
 import Message from '../components/Message'
 import { addToCart, removeFromCart } from '../actions/cartActions'
 
-const CartScreen = ({ match }) => {
+const CartScreen = () => {
   const { id } = useParams()
   const productId = id
-  const history = useNavigate()
+  const navigate = useNavigate()
   const location = useLocation()
   // const qty = location.search ? Number(location.search.split("=")[1]) : 1
   const qty = new URLSearchParams(location.search).get('qty')
@@ -33,7 +33,12 @@ const CartScreen = ({ match }) => {
   }
 
   const checkoutHandler = () => {
-    history('/login?redirect=shipping')
+      if (JSON.parse(localStorage.getItem('userInfo'))) {
+        navigate('/shipping'); // <-- navigate("/shipping")
+      }
+      else {
+        navigate('/login')
+      }
   }
 
   return (

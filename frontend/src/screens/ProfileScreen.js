@@ -7,7 +7,7 @@ import Loader from '../components/Loader'
 import { getUserDetails, updateUserProfile } from '../actions/userActions'
 import { useNavigate } from 'react-router-dom'
 
-const ProfileScreen = ({ }) => {
+const ProfileScreen = () => {
     const navigate = useNavigate()
 
     const [name, setName] = useState('')
