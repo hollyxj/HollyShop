@@ -17,6 +17,10 @@ const ProductScreen = () => {
     const productDetails = useSelector(state => state.productDetails)
     const { loading, error, product } = productDetails
 
+    const addDecimals = (num) => {
+        return (Math.round(num * 100) / 100).toFixed(2)
+      }
+
     useEffect(() =>  {
         dispatch(listProductDetails(id))
     }, [ dispatch, id ])
@@ -63,7 +67,7 @@ const ProductScreen = () => {
                                     Price:
                                 </Col>
                                 <Col className='product-page-section'>
-                                    <strong>${product.price}</strong>
+                                    <strong>${addDecimals(product.price)}</strong>
                                 </Col>
                             </Row>
                         </ListGroup.Item>
