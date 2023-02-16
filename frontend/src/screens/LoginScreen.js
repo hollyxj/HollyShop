@@ -31,6 +31,7 @@ const LoginScreen = ({ match }) => {
     const submitHandler = (e) => {
         e.preventDefault()
         dispatch(login(email, password))
+        navigate('/')
     }
   
     return (
@@ -60,7 +61,7 @@ const LoginScreen = ({ match }) => {
         <Button 
             type='submit' 
             variant='primary'
-            onSubmit={navigate('/')}> 
+            > 
             Sign In
         </Button>
       </Form>
