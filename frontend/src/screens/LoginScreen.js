@@ -20,8 +20,6 @@ const LoginScreen = ({ match }) => {
     const userLogin = useSelector(state => state.userLogin)
     const { loading, error, userInfo } = userLogin
 
-
-
     const submitHandler = (e) => {
         e.preventDefault()
         dispatch(login(email, password))
