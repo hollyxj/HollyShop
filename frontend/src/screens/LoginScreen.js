@@ -10,7 +10,7 @@ import { login } from '../actions/userActions'
 
 const LoginScreen = ({ match }) => {
     const navigate = useNavigate()
-    const location = useLocation()
+    const { search } = useLocation(); 
 
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
@@ -19,6 +19,14 @@ const LoginScreen = ({ match }) => {
 
     const userLogin = useSelector(state => state.userLogin)
     const { loading, error, userInfo } = userLogin
+
+    const redirect = new URLSearchParams(search).get('querystringkey');
+
+    useEffect(() => {
+        if (userInfo && userInfo._id) {
+          navigate(redirect)
+        }
+      }, [userInfo, navigate, redirect]);
 
     const submitHandler = (e) => {
         e.preventDefault()
@@ -49,7 +57,10 @@ const LoginScreen = ({ match }) => {
                 onChange={(e) => setPassword(e.target.value)}
             ></Form.Control>
         </Form.Group>
-        <Button type='submit' variant='primary'>
+        <Button 
+            type='submit' 
+            variant='primary'
+            onSubmit={navigate('/')}>
             Sign In
         </Button>
       </Form>
@@ -57,7 +68,7 @@ const LoginScreen = ({ match }) => {
       <Row className='py-3'>
         <Col>
             New Customer?{' '}
-            <Link to={'/register'}>
+            <Link to={redirect ? `/register?redirect=${redirect}` : '/register'}>
                 Register
             </Link>
         </Col>
@@ -65,5 +76,4 @@ const LoginScreen = ({ match }) => {
     </FormContainer>
   )
 }
-
 export default LoginScreen
