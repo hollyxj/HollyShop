@@ -28,7 +28,7 @@ const UserListScreen = () => {
         navigate('/login')
     }
     dispatch(listUsers())
-  }, [dispatch, successDelete])
+  }, [dispatch, successDelete, userInfo, navigate])
 
   const deleteHandler = (id) => {
     if (window.confirm('WARNING: Delete this user? *This cannot be undone*')) {
@@ -70,7 +70,7 @@ const UserListScreen = () => {
                   )}
                 </td>
                 <td>
-                  <LinkContainer to={`/user/${user._id}/edit`}>
+                  <LinkContainer to={`/admin/user/${user._id}/edit`}>
                     <Button variant='light' className='btn-sm'>
                       <i className='fas fa-edit'></i>
                     </Button>
