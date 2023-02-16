@@ -19,7 +19,7 @@ const App = () => {
       <Header/>
       <main className='py-3'>
         <Container>
-          <h1>Welcome to Holly Shop!</h1>
+          {/* <h1>Welcome to Holly Shop!</h1> */}
           <Routes>         
             <Route path='/login' element={<LoginScreen />}/>
             <Route path='/shipping' element={<ShippingScreen />}/>
