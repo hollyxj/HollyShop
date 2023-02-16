@@ -60,7 +60,7 @@ const LoginScreen = ({ match }) => {
         <Button 
             type='submit' 
             variant='primary'
-            onSubmit={navigate('/')}>
+            onSubmit={navigate('/')}> 
             Sign In
         </Button>
       </Form>
