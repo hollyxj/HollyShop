@@ -20,13 +20,7 @@ const LoginScreen = ({ match }) => {
     const userLogin = useSelector(state => state.userLogin)
     const { loading, error, userInfo } = userLogin
 
-    const redirect = location.search ? location.search.splilt('=')[1] : '/'
 
-    useEffect(() => {
-        if(userInfo) {
-            navigate(redirect)
-        }
-    }, [navigate, userInfo, redirect])
 
     const submitHandler = (e) => {
         e.preventDefault()
@@ -65,7 +59,7 @@ const LoginScreen = ({ match }) => {
       <Row className='py-3'>
         <Col>
             New Customer?{' '}
-            <Link to={redirect ? `/register?redirect=${redirect}` : '/register'}>
+            <Link to={'/register'}>
                 Register
             </Link>
         </Col>
