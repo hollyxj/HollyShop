@@ -3,7 +3,7 @@ import thunk from 'redux-thunk'
 import { productListReducer, productDetailsReducer, productDeleteReducer, productCreateReducer, productUpdateReducer } from './reducers/productReducers'
 import { cartReducer } from './reducers/cartReducers'
 import { userDeleteReducer, userDetailsReducer, userLoginReducer, userRegisterReducer, userUpdateProfileReducer, userUpdateReducer } from './reducers/userReducers'
-import { orderCreateReducer, orderListMyReducer, orderListReducer, orderPayReducer } from './reducers/orderReducers'
+import { orderCreateReducer, orderDeliverReducer, orderListMyReducer, orderListReducer, orderPayReducer } from './reducers/orderReducers'
 import { orderDetailsReducer } from './reducers/orderReducers'
 import { userListReducer } from './reducers/userReducers'
 
@@ -39,6 +39,7 @@ const store = configureStore({
         productCreate: productCreateReducer,
         productUpdate: productUpdateReducer,
         orderList: orderListReducer,
+        orderDeliver: orderDeliverReducer,
     },
     preloadedState: {
         cart: { 
