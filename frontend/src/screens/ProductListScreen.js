@@ -33,7 +33,7 @@ const ProductListScreen = () => {
   }, [dispatch, navigate, userInfo, successDelete])
 
   const deleteHandler = (id) => {
-    if (window.confirm('WARNING: Delete this user? *This cannot be undone*')) {
+    if (window.confirm('WARNING: Delete this product? *This cannot be undone*')) {
       // Delete product
       dispatch(deleteProduct(id))
     }

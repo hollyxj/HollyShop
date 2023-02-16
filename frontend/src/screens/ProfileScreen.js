@@ -19,12 +19,12 @@ const ProfileScreen = () => {
 
     const dispatch = useDispatch()
 
-    const userDetails = useSelector(state => state.userDetails)
+    const userDetails = useSelector((state) => state.userDetails)
     const { loading, error, user } = userDetails
-
-    const userLogin = useSelector(state => state.userLogin)
+  
+    const userLogin = useSelector((state) => state.userLogin)
     const { userInfo } = userLogin
-
+  
     const userUpdateProfile = useSelector((state) => state.userUpdateProfile)
     const { success } = userUpdateProfile
   
@@ -32,19 +32,17 @@ const ProfileScreen = () => {
     const { loading: loadingOrders, error: errorOrders, orders } = orderListMy
 
     useEffect(() => {
-        if(!userInfo) {
-            navigate('/login')
+      if (!userInfo) {
+        navigate('/login')
+      } else {
+        if (!user.name) {
+          dispatch(getUserDetails('profile'))
+          dispatch(listMyOrders())
+        } else {
+          setName(user.name)
+          setEmail(user.email)
         }
-        else {
-            if(!user.name) {
-                dispatch(getUserDetails('profile'))
-                dispatch(listMyOrders())
-            } else {
-                setName(user.name)
-                setEmail(user.email)
-            }
-        }
-
+      }
     }, [dispatch, navigate, userInfo, user])
 
     const submitHandler = (e) => {
