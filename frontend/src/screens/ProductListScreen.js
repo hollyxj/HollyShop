@@ -88,6 +88,7 @@ const ProductListScreen = () => {
               <th>IMAGE</th>
               <th>NAME</th>
               <th>PRICE</th>
+              <th>IN STOCK?</th>
               <th>CATEGORY</th>
               <th>BRAND</th>
               <th></th>
@@ -106,6 +107,18 @@ const ProductListScreen = () => {
                 /></td>
                 <td>{product.name}</td>
                 <td>${product.price}</td>
+
+                <td>
+                {product.countInStock > 0 ? ( 
+                  <>
+                    <i className='fas fa-check' style={{ color: 'green' }}></i> 
+                    {' ('}{product.countInStock}{')'}
+                  </>
+                ) : (
+                  <i className='fas fa-times' style={{ color: 'red' }}></i>
+                ) } 
+                </td>
+
                 <td>{product.category}</td>
                 <td>{product.brand}</td>
                 <td>
