@@ -4,6 +4,7 @@ import { productListReducer, productDetailsReducer } from './reducers/productRed
 import { cartReducer } from './reducers/cartReducers'
 import { userDetailsReducer, userLoginReducer, userRegisterReducer, userUpdateProfileReducer } from './reducers/userReducers'
 import { orderCreateReducer } from './reducers/orderReducers'
+import { orderDetailsReducer } from './reducers/orderReducers'
 
 
 const cartItemsFromStorage = localStorage.getItem('cartItems') 
@@ -28,6 +29,7 @@ const store = configureStore({
         userDetails: userDetailsReducer,
         userUpdateProfile: userUpdateProfileReducer,
         orderCreate: orderCreateReducer,
+        orderDetails: orderDetailsReducer,
     },
     preloadedState: {
         cart: { 
