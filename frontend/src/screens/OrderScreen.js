@@ -68,7 +68,7 @@ const OrderScreen = () => {
           setSdkReady(true)
         }
       }
-    }, [dispatch, orderId, successPay, order, successDeliver])
+    }, [dispatch, orderId, successPay, order, successDeliver, navigate, userInfo])
       
     const deliverHandler = () => {
       dispatch(deliverOrder(order))
