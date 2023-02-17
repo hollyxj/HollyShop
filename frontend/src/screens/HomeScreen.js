@@ -6,8 +6,9 @@ import Message from '../components/Message.js'
 import Loader from '../components/Loader.js'
 import Paginate from '../components/Paginate'
 import { listProducts } from '../actions/productActions.js'
-import { useParams } from 'react-router-dom'
+import { useParams, Link } from 'react-router-dom'
 import ProductCarousel from '../components/ProductCarousel.js'
+import Meta from '../components/Meta.js'
 
 const HomeScreen = () => {
   const dispatch = useDispatch();
@@ -23,9 +24,11 @@ const HomeScreen = () => {
   useEffect(() => {
     dispatch(listProducts(keyword, pageNumber));
   }, [dispatch, keyword, pageNumber]);
+  
   return (
     <>
-    {!keyword && <ProductCarousel />}
+    <Meta/>
+    {!keyword ? <ProductCarousel /> : <Link to='/' className='btn btn-light'>Return to Home</Link>}
       <h1>Latest Products</h1>
       { loading ? ( 
          <Loader />
