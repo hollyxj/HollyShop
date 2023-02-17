@@ -52,3 +52,30 @@ h1 {
 button{
   margin-top:20px;
 }
+
+/* carousel */
+.carousel-item-next,
+.carousel-item-prev,
+.carousel-item.active {
+  display: flex;
+  color: secondary;
+}
+.carousel-caption {
+  position: top;
+  top: 0;
+  bottom: 10;
+}
+
+.carousel-caption h2 {
+  color: #fff;
+}
+
+.carousel img {
+  height: 400px;
+  padding: 30px;
+  margin: 50px;
+  border-radius: 20%;
+}
+.carousel a {
+  margin: 0 auto;
+}
