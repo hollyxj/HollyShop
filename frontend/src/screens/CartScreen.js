@@ -34,7 +34,7 @@ const CartScreen = () => {
 
   const checkoutHandler = () => {
       if (JSON.parse(localStorage.getItem('userInfo'))) {
-        navigate('/shipping'); // <-- navigate("/shipping")
+        navigate('/placeorder'); // <-- navigate("/placeorder")
       }
       else {
         navigate('/login')
