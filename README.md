@@ -31,8 +31,8 @@ Searching for "Squishmallow"
 
 <img src="https://user-images.githubusercontent.com/74798049/220772521-5abc155f-e937-42c6-8149-3f949eac651f.png" width="500"/>
 
-
 Search for "th"
+
 <img src="https://user-images.githubusercontent.com/74798049/220772741-f42fa8a7-d681-4b04-8543-fdeeb6f04d89.png" width="500"/>
 
 ## Review an item
@@ -70,7 +70,7 @@ Includes reviews by customers
 
 
 ## User profile screen
-Shows their order history and gives option to change name, email and password
+Shows a user's order history and allows user to change their name, email and password
 
 <img src="https://user-images.githubusercontent.com/74798049/220764577-d4b1f767-eedb-418b-8e35-022578eaa0f0.png" width="500"/>
 
@@ -140,7 +140,7 @@ They are able to view all users, orders, and products
 
 <img src="https://user-images.githubusercontent.com/74798049/220767427-de2080c4-cb99-42ef-86d8-081288b9539f.png" width="500"/>
 
-### The Admin cannot edit or delete their account from the "All Users" page
+### The Admin cannot edit or delete their own account from the "All Users" page
 
 <img src="https://user-images.githubusercontent.com/74798049/220767532-6ec0a1c4-f804-4278-b417-ee89d3a70e4b.png" width="500"/>
 
@@ -173,7 +173,7 @@ A warning pops up to confirm
 
 <img src="https://user-images.githubusercontent.com/74798049/220768501-6fbb7229-f45d-4fe8-adc5-4a05341117e6.png" width="500"/>
 
-<img src="https://user-images.githubusercontent.com/74798049/220768690-e74c9723-d5e1-44e1-9a24-930111def4a7.png" width="500"/>
+<img src="https://user-images.githubusercontent.com/74798049/220774452-5363dea7-dd4b-4e3f-b45c-255a3085b421.png" width="500"/>
 
 
 ### Delete a product
