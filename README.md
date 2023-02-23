@@ -14,21 +14,26 @@ What a great learning experience and I'm so proud of the result!
 
 ## Overview
 
+- All of the products are displayed on the homepage
+- Pagination is enabled and 10 products are displayed per page
+- A carousel on the homepage shows the top 3 highest rated products
+
 ### Users can:
 - Create an account
-- Edit their name, email and password
-- View all of their orders
-- Leave one review per product (1-5 star rating and a message)
+- Edit their account information (name, email and password)
+- Search for items in the store
 - Cart:
   - Add items to their cart
+  - Remove items from their cart
+  - Update quantity of items in their cart
 - Checkout:
   - If the user clicks "proceed to checkout" and is not signed in, they will be prompted to sign in or create an account
   - Enter their shipping address, which is saved in local storage for the user's cconvenience on future orders
   - Review their order
   - "Pay" for their items using PayPal Sandbox
   - View their order's delivery status
-- Remove items from their cart
-- Update quantity of items in their cart
+- View all of their orders
+- Leave one review per product (1-5 star rating and a message)
 
 ### Admins can:
 - Edit their own account information (name, email, password)
