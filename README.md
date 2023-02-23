@@ -12,6 +12,32 @@ It is so cool to be able to "buy" things from my store using PayPal Sandbox and 
 
 What a great learning experience and I'm so proud of the result!
 
+## Overview
+
+### Users can:
+- Create an account
+- Edit their name, email and password
+- View all of their orders
+- Leave one review per product (1-5 star rating and a message)
+- Cart:
+  - Add items to their cart
+- Checkout:
+  - If the user clicks "proceed to checkout" and is not signed in, they will be prompted to sign in or create an account
+  - Enter their shipping address, which is saved in local storage for the user's cconvenience on future orders
+  - Review their order
+  - "Pay" for their items using PayPal Sandbox
+  - View their order's delivery status
+- Remove items from their cart
+- Update quantity of items in their cart
+
+### Admins can:
+- Edit their own account information (name, email, password)
+- View, edit and delete all users
+- Grant 'Admin' status to other users
+- View all orders made on the site
+- Mark orders as delivered 
+- Create, view, edit and delete all products
+
 # User Functionality
 
 ### Create an account
