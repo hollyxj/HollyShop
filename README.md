@@ -8,8 +8,6 @@ I created an online "store" from scratch using the MERN stack. Instead of copyin
 
 It is so cool to be able to "buy" things from my store using PayPal Sandbox and to login as an admin or regular user to take advantage of all the functionalities I implemented throughout the site such as viewing orders, updating a username & password, and marking items as delivered. Since this course is 2 years out of date, I had to make many adjustments on my own throughout development to ensure compatibility with React Router v6.
 
-## Visit the "store": https://hollyshop.herokuapp.com/
-
 What a great learning experience and I'm so proud of the result!
 
 ## Overview
